@@ -1,0 +1,62 @@
+
+
+.container{
+    background-color: aqua;
+    width: 300px;
+    height: 300px;
+    border: 2px solid black;
+    padding:15px;
+    display: flex;
+    /* alinhamento horizontal*/
+    justify-content:space-between;
+    /*alinhamento vertical*/
+    align-items: center;
+    /*colca elementos numa segunda linha quando não cabem mais*/
+    flex-wrap: wrap;
+
+}
+
+.item{
+    border: 2px solid red;
+    height: 50px;
+    width:50px;
+    background-color: blue;
+}
+
+.box{
+    border: 2px solid red;
+    height: 50px;
+    background-color: blue;
+    /*faz com que cada elemento tenha 30px(de largura) por padrao no inicio do layout*/
+    flex-basis: 30px;
+}
+
+#item-1{
+    flex-grow: 2;
+}
+
+#item-2, #item-3{
+    /*nao diminue comparado com os outros*/
+    flex-grow: 1;
+}
+
+#item-2{
+    flex-basis: 100px;
+}
+
+#item-3{
+    /*diminue numa porção maior*/
+    flex-shrink: 2;
+}
+
+/*ordem dos items*/
+
+#item-2{
+    order:1;
+}
+#item-3{
+    order: 2;
+}
+#item-1{
+   order: 3;
+}
